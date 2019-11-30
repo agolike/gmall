@@ -2,4 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.agolike.gmall.user.Mapper.UserMapper">
 
+    <select id="findAll" resultType="com.agolike.gmall.user.bean.UmsMember">
+        select * from ums_member
+    </select>
 </mapper>

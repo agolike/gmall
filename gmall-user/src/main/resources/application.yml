@@ -7,7 +7,7 @@ spring:
       load-on-startup: 1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://112.74.43.76:3307/gmall?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost/gmall?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: 123456
 
