@@ -1,6 +1,7 @@
 package com.agolike.gmall.user.Mapper;
 
-import com.agolike.gmall.user.bean.UmsMember;
+
+import com.agolike.gmall.bean.UmsMember;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
