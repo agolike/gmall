@@ -1,9 +1,11 @@
 package com.agolike.gmall.bean;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
+@Table(name = "ums_member")
 public class UmsMember implements Serializable {
 
     @Id

@@ -1,0 +1,33 @@
+spring:
+  dubbo:
+    application:
+      name: user-service
+    registry:
+      address: 112.74.43.76:2181
+      protocol: zookeeper
+    base-package: com.agolike.gmall
+    protocol:
+      name: dubbo
+  mvc:
+    servlet:
+      load-on-startup: 1
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/gmall?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+logging:
+  level:
+    com.agolike: debug
+  path: "D:/test/test.log"
+  pattern:
+    dateformat: "''"
+mybatis:
+  type-aliases-package: com.agolike.gmall.user.bean
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8082

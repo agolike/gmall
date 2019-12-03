@@ -1,0 +1,15 @@
+spring:
+  dubbo:
+    application:
+      name: user-web
+    registry:
+      address: 112.74.43.76:2181
+      protocol: zookeeper
+    base-package: com.agolike.gmall
+    protocol:
+      name: dubbo
+    consumer:
+      timeout: 600000
+      check: false
+server:
+  port: 8083
