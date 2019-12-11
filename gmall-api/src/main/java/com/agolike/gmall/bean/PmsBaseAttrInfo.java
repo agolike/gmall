@@ -10,6 +10,7 @@ import java.util.List;
  * @param
  * @return
  */
+@Table(name ="pms_base_attr_info" )
 public class PmsBaseAttrInfo implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,4 +8,6 @@ import java.util.List;
 public interface AttrInfoService {
     List<PmsBaseAttrInfo> getAttrInfoListByC3Id(String catalog3Id);
     public List<PmsBaseAttrValue> getAttrValueListByAttrId(String attrId);
+
+    String saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
 }

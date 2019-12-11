@@ -2,6 +2,7 @@ package com.agolike.gmall.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.io.Serializable;
 
@@ -9,6 +10,7 @@ import java.io.Serializable;
  * @param
  * @return
  */
+@Table(name = "pms_base_attr_value")
 public class PmsBaseAttrValue implements Serializable {
     @Id
     @Column

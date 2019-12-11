@@ -22,6 +22,7 @@ public class AttrInfoController {
     @RequestMapping("saveAttrInfo")
     @ResponseBody
     public String saveAttrInfo(@RequestBody PmsBaseAttrInfo pmsBaseAttrInfo){
+        String flag = attrInfoService.saveAttrInfo(pmsBaseAttrInfo);
         return "success";
     }
 

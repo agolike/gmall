@@ -5,10 +5,11 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface AttrInfoMapper {
+public interface AttrInfoMapper extends Mapper<PmsBaseAttrInfo> {
     @Select("select * from pms_base_attr_info where catalog3_id = #{catalog3Id}")
     List<PmsBaseAttrInfo> getAttrInfoListByC3Id(String catalog3Id);
 
