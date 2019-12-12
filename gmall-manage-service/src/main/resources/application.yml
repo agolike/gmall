@@ -1,3 +1,4 @@
+
 spring:
   dubbo:
     application:
@@ -13,9 +14,9 @@ spring:
       load-on-startup: 1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost/gmall?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://112.74.43.76/gmall?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: root
 
 logging:
   level:
@@ -24,7 +25,7 @@ logging:
   pattern:
     dateformat: "''"
 mybatis:
-  type-aliases-package: com.agolike.gmall.bean
+  type-aliases-package: com.agolike.gmall.user.bean
   mapper-locations: classpath:mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
