@@ -2,8 +2,10 @@ package com.agolike.gmall.manage.service;
 
 import com.agolike.gmall.bean.PmsBaseAttrInfo;
 import com.agolike.gmall.bean.PmsBaseAttrValue;
+import com.agolike.gmall.bean.PmsBaseSaleAttr;
 import com.agolike.gmall.manage.mapper.AttrInfoMapper;
 import com.agolike.gmall.manage.mapper.AttrValueMapper;
+import com.agolike.gmall.manage.mapper.PmsBaseSaleAttrMapper;
 import com.agolike.gmall.service.AttrInfoService;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,17 +19,29 @@ public class AttrInfoServiceImpl implements AttrInfoService {
     AttrInfoMapper attrInfoMapper;
     @Autowired
     AttrValueMapper attrValueMapper;
+    @Autowired
+    PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper;
 
+
+    /*
+    * 根据分类id获取平台属性
+    * */
     @Override
     public List<PmsBaseAttrInfo> getAttrInfoListByC3Id(String catalog3Id) {
         return attrInfoMapper.getAttrInfoListByC3Id(catalog3Id);
     }
 
+    /*
+    * 根据平台属性id获取平台属性值
+    * */
     @Override
     public List<PmsBaseAttrValue> getAttrValueListByAttrId(String attrId) {
         return attrValueMapper.getAttrValueListByAttrId(attrId);
     }
 
+    /*
+    * 保存更新平台属性和值
+    * */
     @Override
     public String saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo) {
         //获取info对象的主键
@@ -65,5 +79,13 @@ public class AttrInfoServiceImpl implements AttrInfoService {
 
 
         return null;
+    }
+
+    /*
+    * 获取销售属性
+    * */
+    @Override
+    public List<PmsBaseSaleAttr> baseSaleAttrList() {
+        return pmsBaseSaleAttrMapper.selectAll();
     }
 }

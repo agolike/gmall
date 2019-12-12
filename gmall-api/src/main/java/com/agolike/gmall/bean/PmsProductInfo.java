@@ -19,8 +19,8 @@ public class PmsProductInfo implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
-    @Column
-    private String productName;
+    @Column(name = "product_name")
+    private String spuName;
 
     @Column
     private String description;
@@ -35,12 +35,12 @@ public class PmsProductInfo implements Serializable {
     private List<PmsProductImage> spuImageList;
 
 
-    public String getProductName() {
-        return productName;
+    public String getSpuName() {
+        return spuName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setSpuName(String spuName) {
+        this.spuName = spuName;
     }
 
     public List<PmsProductSaleAttr> getSpuSaleAttrList() {
